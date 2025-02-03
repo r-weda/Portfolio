@@ -90,7 +90,7 @@ Contributions are welcome! If you have ideas or suggestions to enhance the portf
 
 For inquiries or collaborations, feel free to reach out via:
 
-- **Email**: [Insert your email here]
+- **Email**: [robertweda993@gmail.com]
 - **LinkedIn**: [Robert Weda LinkedIn](https://www.linkedin.com/in/robert-weda-410303274/)
 - **GitHub**: [r-weda](https://github.com/r-weda)
 
