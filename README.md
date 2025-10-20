@@ -1,6 +1,6 @@
 # Portfolio Website Documentation
 
-Welcome to the documentation for my personal portfolio website hosted at [https://r-weda.github.io/Portfolio/](https://r-weda.github.io/Portfolio/). This README overviews the project, features, setup instructions, and other relevant details.
+Welcome to the documentation for my personal portfolio website hosted at [https://portfolio-smoky-eight-89.vercel.app/). This README overviews the project, features, setup instructions, and other relevant details.
 
 ---
 
@@ -8,7 +8,7 @@ Welcome to the documentation for my personal portfolio website hosted at [https:
 
 This portfolio website showcases my professional journey, skills, projects, and contact information. It serves as a hub for potential collaborators, clients, and employers to learn more about my work and expertise.
 
-**Live Preview**: [r-weda.github.io/Portfolio](https://r-weda.github.io/Portfolio/)
+**Live Preview**: [https://portfolio-smoky-eight-89.vercel.app/](https://portfolio-smoky-eight-89.vercel.app/)
 
 ---
 
