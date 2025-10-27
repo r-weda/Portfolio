@@ -1,56 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Robert Weda</title>
-  <link rel="icon" type="image/x-icon" href="icons8-favicon-50.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+  <head>
+    <title>Robert Weda</title>
+    <link rel="icon" type="image/x-icon" href="icons8-favicon-50.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     .w3-row-padding img {margin-bottom: 12px}
-    .w3-sidebar {width: 120px; background: #222;}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
     #main {margin-left: 120px}
-
     /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {
-      #main {margin-left: 0}
-    }
-
-    /* Custom styling for the hamburger icon */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    
+    /* Hamburger menu styles */
     .hamburger {
-      cursor: pointer;
+      display: none;
       font-size: 24px;
-      padding: 10px;
+      cursor: pointer;
+      padding: 16px;
+      color: white;
     }
-
-    /* Hide the mobile menu by default */
+    
     .mobile-menu {
       display: none;
-      background-color: #000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+    }
+    
+    .mobile-menu.active {
+      display: block;
+    }
+    
+    .mobile-menu-header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 16px;
+    }
+    
+    .close-btn {
+      font-size: 32px;
+      color: white;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100% - 64px);
+    }
+    
+    .mobile-menu-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 20px;
+      width: 100%;
       text-align: center;
     }
-
-    .mobile-menu a {
-      display: block;
-      color: white;
-      padding: 10px;
-      text-decoration: none;
+    
+    .mobile-menu-links a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
-
-    .mobile-menu a:hover {
-      background-color: #333;
+    
+    @media only screen and (max-width: 600px) {
+      .hamburger {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+      }
     }
-  </style>
-</head>
-
+    </style>
+  </head>
 <body class="w3-black">
-
-<!-- Sidebar (Hidden on small screens) -->
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
   <img src="pexels-sathez994-698808.jpg" style="width:100%">
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
@@ -70,46 +111,46 @@
   </a>
 </nav>
 
-<!-- Top Navbar for Small Screens -->
-<div class="w3-top w3-hide-large w3-hide-medium">
-  <div class="w3-bar w3-black w3-padding">
-    <span class="hamburger w3-left" onclick="toggleMenu()">
-      <i class="fa fa-bars"></i>
-    </span>
-    <span class="w3-bar-item w3-center">MENU</span>
-  </div>
+<!-- Hamburger icon for small screens -->
+<div class="hamburger" onclick="toggleMenu()">
+  <i class="fa fa-bars"></i>
+</div>
 
-  <!-- Hidden Mobile Menu -->
-  <div id="mobileLinks" class="mobile-menu">
-    <a href="#">HOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#mywork">PROJECTS</a>
-    <a href="#contact">CONTACT</a>
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="#" onclick="toggleMenu()">
+      <i class="fa fa-home"></i> HOME
+    </a>
+    <a href="#about" onclick="toggleMenu()">
+      <i class="fa fa-user"></i> ABOUT
+    </a>
+    <a href="#mywork" onclick="toggleMenu()">
+      <i class="fa fa-eye"></i> PROJECTS
+    </a>
+    <a href="#contact" onclick="toggleMenu()">
+      <i class="fa fa-envelope"></i> CONTACT
+    </a>
   </div>
 </div>
 
-<!-- Page Content -->
-<div id="main">
-  <div class="w3-container w3-padding-32">
-    <h1>Welcome to Robert Weda’s Portfolio</h1>
-    <p>Your content here...</p>
-  </div>
+<!-- Page content (add your content here) -->
+<div class="w3-padding-large" id="main">
+  <!-- Your page content goes here -->
 </div>
 
 <script>
-  function toggleMenu() {
-    var menu = document.getElementById("mobileLinks");
-    if (menu.style.display === "block") {
-      menu.style.display = "none";
-    } else {
-      menu.style.display = "block";
-    }
-  }
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('active');
+}
 </script>
 
 </body>
 </html>
-
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
@@ -347,6 +388,7 @@ Robert weda (1).pdf" download="Robert_Weda_Resume.pdf" >
 
 </body>
 </html>
+
 
 
 
