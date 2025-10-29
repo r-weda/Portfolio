@@ -138,7 +138,7 @@ const tiltCards = new TiltCard('#mywork .w3-half a', {
   perspective: 1000,        // Perspective value
   scale: 1.08,              // Scale on hover (slightly more noticeable)
   speed: 400,               // Transition speed in ms
-  glare: true,              // Enable glare effect
+  glare: false,              // Enable glare effect
   glareMaxOpacity: 0.2      // Maximum glare opacity (subtle for images)
 });
 
