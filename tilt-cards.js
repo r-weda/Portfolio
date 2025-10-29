@@ -137,7 +137,7 @@ const tiltCards = new TiltCard('#mywork .w3-half a', {
   maxTilt: 10,              // Maximum tilt angle in degrees (reduced for images)
   perspective: 1000,        // Perspective value
   scale: 1.08,              // Scale on hover (slightly more noticeable)
-  speed: 200,               // Transition speed in ms
+  speed: 600,               // Transition speed in ms
   glare: false,              // Enable glare effect
   glareMaxOpacity: 0.2      // Maximum glare opacity (subtle for images)
 });
