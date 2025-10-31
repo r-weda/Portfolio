@@ -187,6 +187,28 @@ themeToggleStyle.textContent = `
     color: #1a1a1a !important;
   }
   
+  /* Hamburger menu icon - dark color for visibility in light mode */
+  body[data-theme="light"] .hamburger {
+    color: #1a1a1a !important;
+  }
+  
+  /* Pricing cards - darker text for readability in light mode */
+  body[data-theme="light"] .w3-ul {
+    color: #1a1a1a !important;
+  }
+  
+  body[data-theme="light"] .w3-ul li {
+    color: #1a1a1a !important;
+  }
+  
+  body[data-theme="light"] .w3-ul h2 {
+    color: #1a1a1a !important;
+  }
+  
+  body[data-theme="light"] .w3-ul .w3-opacity {
+    color: #6b7280 !important;
+  }
+  
   /* Theme toggle button adjustments for light mode */
   body[data-theme="light"] .theme-toggle-btn {
     background: rgba(0, 0, 0, 0.05) !important;
