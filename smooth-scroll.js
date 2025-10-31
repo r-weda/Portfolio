@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Add CSS for active navigation styling
-const style = document.createElement('style');
-style.textContent = `
+const smoothScrollStyle = document.createElement('style');
+smoothScrollStyle.textContent = `
   /* Active navigation link styling */
   nav a.active-nav {
     background-color: #1a1a1a !important;
@@ -141,4 +141,4 @@ style.textContent = `
     transition: color 0.3s ease;
   }
 `;
-document.head.appendChild(style);
+document.head.appendChild(smoothScrollStyle);
