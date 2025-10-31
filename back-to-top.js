@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Add additional CSS for button states
-const style = document.createElement('style');
-style.textContent = `
+const backToTopStyle = document.createElement('style');
+backToTopStyle.textContent = `
   .back-to-top-btn:active {
     transform: scale(0.95) !important;
   }
@@ -109,4 +109,4 @@ style.textContent = `
     }
   }
 `;
-document.head.appendChild(style);
+document.head.appendChild(backToTopStyle);
